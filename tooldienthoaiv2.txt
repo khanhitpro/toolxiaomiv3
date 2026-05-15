@@ -44,7 +44,7 @@ print_ui() {
   echo -e "${BLUE}📡 MENU KẾT NỐI TIVI XIAOMI PRO${NC}"
   echo -e "${WHITE}👨‍💻 Khánh IT | ☎ 0967.341.608${NC}"
   echo -e "${WHITE}📦    Phiên bản: 4.66${NC}"
-  echo -e "${WHITE}⚠️ Bản Cập Nhật: 01-05-2026${NC}"
+  echo -e "${WHITE}⚠️ Bản Cập Nhật: 15-05-2026${NC}"
   echo ""
   echo -e "  ${C_BAR}[ ${C_FILL}${BAR}${RST}${C_BAR} ] ${C_TXT}${PCT}%${RST} ${C_DIM}(Bước ${STEP}/${TOTAL_STEPS})${RST}"
   echo ""
