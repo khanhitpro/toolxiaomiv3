@@ -54,15 +54,15 @@ banner_menu2() {
   echo -e "${YELLOW}⚠️ Lưu ý:${NC} Làm đúng thứ tự để tránh lỗi"
   echo -e "${CYAN}=======================================${NC}"
 
-  echo -e "${GREEN}📦 1. Tải file APK Về Điện Thoại (Basic)${NC}"
-  echo -e "${YELLOW}⚡ 2. Tải file APK Về Điện Thoại PRO (Speed + UI)${NC}"
+  echo -e "${GREEN}📦 1. Tải file APK Về Điện Thoại V3 (Basic)${NC}"
+  echo -e "${YELLOW}⚡ 2. Tải file APK Về Điện Thoại PRO V3 (Speed + UI)${NC}"
   echo -e "${BLUE}📲 3. Cài Projectivy Launcher TV Nội Địa BẢN MỚI${NC}"
   echo -e "${MAGENTA}🎯 4. Cài Projectivy Launcher TV Nội Địa${NC}"
   echo -e "${CYAN}🔐 5. Cấp quyền + kích hoạt Launcher${NC}"
   echo -e "${WHITE}📥 6. Cài APK từ Download điện thoại${NC}"
   echo -e "${BLUE}📤 7. Reset Cứng - XOÁ TOÀN BỘ DỮ LIỆU TIVI${NC}"
   echo -e "${RED}🔄 8. Khởi động lại TV${NC}"
-  echo -e "${CYAN}🌐 9. Tải ứng dụng từ JSON về Điện Thoại (GitHub)${NC}"
+  echo -e "${CYAN}🌐 9. Tải ứng dụng V2 cho Tool${NC}"
   echo -e "${YELLOW}↩️  0. Quay lại MENU KẾT NỐI${NC}"
 
   echo -e "${CYAN}=======================================${NC}"
