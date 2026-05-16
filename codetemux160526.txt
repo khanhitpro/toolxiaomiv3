@@ -15,7 +15,7 @@ banner_menu1() {
   echo -e "${BLUE}📡 MENU KẾT NỐI TIVI XIAOMI PRO${NC}"
   echo -e "${WHITE}👨‍💻 Khánh IT | ☎ 0967.341.608${NC}"
   echo -e "${WHITE}📦    Phiên bản: 4.66${NC}"
-  echo -e "${WHITE}⚠️ Bản Cập Nhật: 01-05-2026${NC}"
+  echo -e "${WHITE}⚠️ Bản Cập Nhật: 16-05-2026${NC}"
 
   echo -e "${BLUE}────────────────────────────${NC}"
   echo ""
@@ -25,7 +25,7 @@ banner_menu1() {
   echo -e "${CYAN}🔓 Developer:${NC} Vào ${WHITE}About${NC} → chọn ${YELLOW}Model${NC} → ${GREEN}OK 9 lần${NC}"
   echo -e "${CYAN}⛔ Lưu ý:${NC} Tắt ${RED}Update tự động${NC}"
   echo -e "${CYAN}⚙️ Quyền:${NC} Account - Security → Bật ${GREEN}ADB Debugging${NC} + ${GREEN}Unknown sources${NC}"
-  echo -e "${CYAN}📶 Kết nối:${NC} Bật ${WHITE}WiFi${NC} - Lấy địa chỉ IP : ${ip}"
+  echo -e "${CYAN}📶 Kết nối:${NC} Bật ${WHITE}WiFi${NC} - Lấy địa chỉ IP : ${ip} $ANDROID"
   echo ""
   echo -e "${BLUE}────────────────────────────${NC}"
 
@@ -36,7 +36,7 @@ banner_menu1() {
 
 banner_menu2() {
   echo -e "${GREEN}=======================================${NC}"
-  echo -e "${GREEN}🚀 CÔNG CỤ CÀI ĐẶT TIVI XIAOMI TỰ ĐỘNG V2${NC}"
+  echo -e "${GREEN}🚀 CÔNG CỤ CÀI ĐẶT TIVI XIAOMI TỰ ĐỘNG V3${NC}"
   echo -e "${WHITE}👨‍💻 Khánh IT - 0967.341.608 - 4.66${NC}"
   echo -e "${GREEN}---------------------------------------${NC}"
 
@@ -56,7 +56,7 @@ banner_menu2() {
 
   echo -e "${GREEN}📦 1. Tải file APK Về Điện Thoại (Basic)${NC}"
   echo -e "${YELLOW}⚡ 2. Tải file APK Về Điện Thoại PRO (Speed + UI)${NC}"
-  echo -e "${BLUE}📲 3. Cài đặt App & cấu hình TV Quốc Tế${NC}"
+  echo -e "${BLUE}📲 3. Cài Projectivy Launcher TV Nội Địa BẢN MỚI${NC}"
   echo -e "${MAGENTA}🎯 4. Cài Projectivy Launcher TV Nội Địa${NC}"
   echo -e "${CYAN}🔐 5. Cấp quyền + kích hoạt Launcher${NC}"
   echo -e "${WHITE}📥 6. Cài APK từ Download điện thoại${NC}"
@@ -97,7 +97,7 @@ menu_connect() {
   while true; do
     clear
     banner_menu1
-    read -e -p $'\e[1;36m👉 Nhập IP (192.168.1.10): \e[0m' ip
+    read -e -p $'\e[1;36m👉 Nhập IP: \e[0m' ip
     [ "$ip" = "0" ] && break
 
     adb connect "$ip:5555" >/dev/null 2>&1
@@ -142,7 +142,7 @@ menu_main() {
 # ===== DOWNLOAD (GITHUB JSON) =====
 download_json() {
   DIR="$HOME/storage/shared/apktool"
-  JSON_URL="https://raw.githubusercontent.com/khanhitxiaomi/toolxiaomi/main/apptoolxiaomi.json"
+  JSON_URL="https://raw.githubusercontent.com/khanhitpro/toolxiaomiv3/main/apptoolxiaomi.json"
 
   mkdir -p "$DIR"
   clear
@@ -221,24 +221,14 @@ download_all() {
 
   URLS=(
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/allapp.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconho.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconvet1.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconvet2.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/consoc.mp4"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/cotivi.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/dlstore.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/file.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/imedia.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/katniss_2.2.0.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/keyboard.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/mstore.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/p.apk"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/p.apk"
     "https://github.com/khanhitpro/XIAOMI/releases/download/khoapp1/khanhstore-6.9.6.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/projectiv1.plbackup"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/projectiv2.plbackup"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/vietplay.apk"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/projectiv1.plbackup"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/projectiv2.plbackup"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/youtube.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/taive.apk"
   )
 
   echo -e "${CYAN}⬇️ Đang tải toàn bộ file...${NC}"
@@ -262,24 +252,14 @@ download_all_pro() {
 
   URLS=(
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/allapp.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconho.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconvet1.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/anhconvet2.jpg"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/consoc.mp4"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/cotivi.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/dlstore.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/file.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/imedia.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/katniss_2.2.0.apk"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/keyboard.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/mstore.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/p.apk"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/p.apk"
     "https://github.com/khanhitpro/XIAOMI/releases/download/khoapp1/khanhstore-6.9.6.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/projectiv1.plbackup"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/projectiv2.plbackup"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/vietplay.apk"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/projectiv1.plbackup"
+    "https://github.com/khanhitpro/toolxiaomiv3/releases/download/xiaomiv3/projectiv2.plbackup"
     "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/youtube.apk"
-    "https://github.com/khanhitxiaomi/toolxiaomi/releases/download/toolxiaomi/taive.apk"
   )
 
   clear
@@ -320,72 +300,105 @@ download_all_pro() {
 }
 
 
-# ===== CÀI GIAO DIỆN PROJECTIVY CHO TIVI QUỐC TẾ =====
+# ===== CÀI GIAO DIỆN PROJECTIVY CHO TIVI BẢN MỚI =====
 install_all() {
- DIR="$HOME/storage/shared/apktool"
+  DIR="$HOME/storage/shared/apktool"
+  # 1. Thiết lập Accessibility + Keyboard
 
-  # 1. Cài riêng p.apk trước
-  echo "📦 Đang cài: p.apk"
+  echo "Đang cài giao diện tiếng Việt Project 2025..."
+  adb shell service call alarm 3 s16 Asia/Bangkok >/dev/null 2>&1
+  adb shell settings put global device_locales vi-VN >/dev/null 2>&1
+  adb shell settings put global sys_locale vi-VN >/dev/null 2>&1
+  adb shell settings put system system_locales vi-VN >/dev/null 2>&1
+  adb shell settings put global heads_up_notifications_enabled 0 >/dev/null 2>&1
+  adb shell settings put global stay_on_while_plugged_in 3 >/dev/null 2>&1
+
+  # 2. Disable các app hệ thống không cần thiết
+
+  adb shell pm disable-user --user 0 com.mitv.tvhome >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.voicecontrol >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.mitv.cloudcontrol >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.mitv.gallery >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.sohu.inputmethod.sogou.tv >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.appstore >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.karaoke.service >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.upgrade >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.tv.gallery >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xm.webcontent >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.duokan.videodaily >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.calendar >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.health >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.hyper.screensaver >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.mitv.screensaver >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.shop >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.tweather >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.handbook >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.xiaomi.mitv.aod.screensaver >/dev/null 2>&1
+  adb shell pm disable-user --user 0 com.mitv.alarmcenter >/dev/null 2>&1
+
+ 
+  echo "📦 Đang cài giao diện tiếng việt"
   if adb install -g "$DIR/p.apk"; then
     echo "✅ Cài thành công: p.apk"
-    adb shell service call alarm 3 s16 Asia/Bangkok
-    adb shell settings put global device_locales vi-VN
-    adb shell settings put global sys_locale vi-VN
-    adb shell settings put system system_locales vi-VN
-    adb shell settings put global heads_up_notifications_enabled 0
-    adb shell pm grant com.spocky.projengmenu android.permission.READ_EXTERNAL_STORAGE
-    adb shell pm grant com.spocky.projengmenu android.permission.WRITE_SECURE_SETTINGS
-    adb shell appwidget grantbind --package com.spocky.projengmenu --user 0
-    adb shell settings put global stay_on_while_plugged_in 3
-    adb shell am start -n com.spocky.projengmenu/com.spocky.projengmenu.ui.home.MainActivity 
+    adb shell pm grant com.spocky.projengmenu android.permission.WRITE_SECURE_SETTINGS >/dev/null 2>&1
+    adb shell pm grant com.spocky.projengmenu android.permission.MANAGE_EXTERNAL_STORAGE >/dev/null 2>&1
+    adb shell appops set com.spocky.projengmenu WRITE_SETTINGS allow >/dev/null 2>&1
+    adb shell appops set com.spocky.projengmenu REQUEST_INSTALL_PACKAGES allow >/dev/null 2>&1
+    adb shell appops set com.spocky.projengmenu READ_EXTERNAL_STORAGE allow >/dev/null 2>&1
+    adb shell appops set com.spocky.projengmenu WRITE_EXTERNAL_STORAGE allow >/dev/null 2>&1
+    adb shell monkey -p com.spocky.projengmenu -c android.intent.category.LAUNCHER 1 >/dev/null 2>&1
+    adb shell am start -n com.spocky.projengmenu/.ui.home.MainActivity >/dev/null 2>&1
+    adb shell cmd package set-home-activity com.spocky.projengmenu/.ui.home.MainActivity >/dev/null 2>&1
+
   else
     echo "❌ Lỗi khi cài: p.apk"
   fi
 
-  # 2. Cài khối app đầu tiên
-  for apk in dlstore.apk mstore.apk keyboard.apk katniss_2.2.0.apk file.apk; do
+
+  # 3. Cài khối app đầu tiên
+  for apk in keyboard.apk katniss_2.2.0.apk file.apk; do
     echo "📦 Đang cài: $apk"
     adb install -g "$DIR/$apk" && echo "✅ Thành công" || echo "❌ Lỗi"
   done
 
-  # 3. Cài khối app mới
-  for apk in allapp.apk youtube.apk khanhstore-6.9.6.apk taive.apk imedia.apk vietplay.apk cotivi.apk; do
+  # 4. Cài khối app mới
+  for apk in allapp.apk youtube.apk khanhstore-6.9.6.apk; do
     echo "📦 Đang cài: $apk"
     adb install -g "$DIR/$apk" && echo "✅ Thành công" || echo "❌ Lỗi"
   done
 
-  # 4. Thiết lập Accessibility + Keyboard
-  echo "⚙️ Thiết lập Accessibility và Keyboard"
-  adb shell settings put secure enabled_accessibility_services com.mitv.shareds/com.mitv.shareds.HomeService
-  adb shell settings put secure accessibility_enabled 1
-  adb shell ime enable com.liskovsoft.leankeyboard/.ime.LeanbackImeService
-  adb shell settings put secure default_input_method com.liskovsoft.leankeyboard/.ime.LeanbackImeService
-
-  # 5. Push file ảnh và backup
-  echo "📤 Gửi file ảnh và backup lên TV"
-  # Đẩy ảnh và video vào DCIM
-  adb push "$DIR/anhconvet.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/anhconho.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/anhconvet2.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/consoc.mp4" "/sdcard/DCIM/"
-
-  # Đẩy file backup vào Download
+  # 5. Đẩy file backup vào Download
+  echo "📤 Gửi file backup lên TV"
   adb push "$DIR/projectiv1.plbackup" "/sdcard/Download/"
   adb push "$DIR/projectiv2.plbackup" "/sdcard/Download/"
+  echo "Đang cấp quyền cho ứng dụng..."
 
 
-  # 6. Cấp quyền giọng nói
-  adb shell cmd voiceinteraction set-interactor com.google.android.katniss/.service.HotwordService
-  adb shell settings put secure voice_interaction_service com.google.android.katniss/.service.HotwordService
-  adb shell am start -n com.spocky.projengmenu/com.spocky.projengmenu.ui.home.MainActivity
+  # 6. Cấp quyền
+  adb shell appops set com.mixplorer.silver WRITE_SETTINGS allow >/dev/null 2>&1
+  adb shell appops set com.mixplorer.silver READ_EXTERNAL_STORAGE allow >/dev/null 2>&1
+  adb shell appops set com.mixplorer.silver WRITE_EXTERNAL_STORAGE allow >/dev/null 2>&1
+  adb shell appops set com.mixplorer.silver REQUEST_INSTALL_PACKAGES allow >/dev/null 2>&1
+  adb shell appops set com.oxootv.spagreen REQUEST_INSTALL_PACKAGES allow >/dev/null 2>&1
+
+  adb shell ime enable com.liskovsoft.leankeyboard/.ime.LeanbackImeService >/dev/null 2>&1
+  adb shell settings put secure default_input_method com.liskovsoft.leankeyboard/.ime.LeanbackImeService >/dev/null 2>&1
+
+  adb shell am start -n com.spocky.projengmenu/.ui.home.MainActivity >/dev/null 2>&1
+  adb shell cmd package set-home-activity com.spocky.projengmenu/.ui.home.MainActivity >/dev/null 2>&1
+
+  
+  
+  # 7. Khởi động lại thiết bị
+  echo "🔄 Đang gửi lệnh khởi động lại..."
+  sleep 15
+  adb reboot
   echo "✅ Đã hoàn tất cài đặt tivi!"
   echo "   Quay lại menu chính sau 3 giây..."
   sleep 3
   read -p "↩️ Nhấn Enter để Quay lại menu..."
   menu_main
 }
-
-
 
 
 projectivy_install() {
@@ -409,13 +422,13 @@ projectivy_install() {
   fi
 
   # 2. Cài khối app đầu tiên
-  for apk in dlstore.apk mstore.apk keyboard.apk katniss_2.2.0.apk file.apk; do
+  for apk in keyboard.apk katniss_2.2.0.apk file.apk; do
     echo "📦 Đang cài: $apk"
     adb install -g "$DIR/$apk" && echo "✅ Thành công" || echo "❌ Lỗi"
   done
 
   # 3. Cài khối app mới
-  for apk in allapp.apk youtube.apk khanhstore-6.9.6.apk taive.apk imedia.apk cotivi.apk; do
+  for apk in allapp.apk youtube.apk khanhstore-6.9.6.apk; do
     echo "📦 Đang cài: $apk"
     adb install -g "$DIR/$apk" && echo "✅ Thành công" || echo "❌ Lỗi"
   done
@@ -439,16 +452,8 @@ projectivy_install() {
     adb shell pm disable-user --user 0 $pkg >/dev/null 2>&1
   done
 
-  # 6. Push file ảnh và backup
-  echo "📤 Gửi file ảnh và backup lên TV"
-  echo "📤 Gửi file ảnh và backup lên TV"
-  # Đẩy ảnh và video vào DCIM
-  adb push "$DIR/anhconvet.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/anhconho.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/anhconvet2.jpg" "/sdcard/DCIM/"
-  adb push "$DIR/consoc.mp4" "/sdcard/DCIM/"
-
-  # Đẩy file backup vào Download
+  # 6. Đẩy file backup vào Download
+  echo "📤 Gửi file backup lên TV"
   adb push "$DIR/projectiv1.plbackup" "/sdcard/Download/"
   adb push "$DIR/projectiv2.plbackup" "/sdcard/Download/"
 
@@ -460,15 +465,8 @@ projectivy_install() {
   adb shell settings put secure voice_interaction_service com.google.android.katniss/.service.HotwordService
   adb shell am start -n com.spocky.projengmenu/com.spocky.projengmenu.ui.home.MainActivity
 
-  # 8. Cài riêng VTV
-  echo "📦 Đang cài VTV"
-  if adb install -g "$DIR/vietplay.apk"; then
-    echo "✅ Cài thành công VTV" 
-  else
-    echo "❌ Lỗi khi cài: p.apk"
-  fi
-
-  # 9. Khởi động lại thiết bị
+  
+  # 8. Khởi động lại thiết bị
   echo "🔄 Đang gửi lệnh khởi động lại..."
   sleep 15
   adb reboot
