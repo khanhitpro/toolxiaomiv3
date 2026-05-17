@@ -5,8 +5,8 @@
     "guide": "Coppy code này → Mở phần mềm vừa cài → Paste hoặc dán vào → Enter để chạy"
   },
   {
-    "name": "2 - CODE NANO TEMUX CHUẨN v2",
-    "url": "https://raw.githubusercontent.com/khanhitpro/toolxiaomiv3/main/tooldienthoaiv2.txt",
+    "name": "2 - CODE NANO TEMUX CHUẨN CÀI APP",
+    "url": "https://raw.githubusercontent.com/khanhitpro/toolxiaomiv3/main/caiappxiaomi.txt",
     "guide": "Coppy code này → Paste vào NANO → Bấm lệnh để lưu Ctrl + X + Enter → Phấm phím Y + Enter để đồng ý chạy"
   },
   {
@@ -15,13 +15,8 @@
     "guide": "Nhập mật khẩu để sử dụng hoặc liên hệ: 0967.341.608"
   },
   {
-    "name": "XOÁ CODE NANO ĐỂ CHẠY TEMUX MỚI",
+    "name": "4 - XOÁ CODE NANO ĐỂ CHẠY TEMUX MỚI",
     "url": "https://raw.githubusercontent.com/khanhitpro/khanhtool/main/khanhtool/setupv2.txt",
     "guide": "Nhập mật khẩu để sử dụng hoặc liên hệ: 0967.341.608"
-  },
-  {
-    "name": "CODE NANO TEMUX BẢN DỰ PHÒNG 2",
-    "url": "https://raw.githubusercontent.com/khanhitpro/toolxiaomiv3/main/codetemux010526.txt",
-    "guide": "Coppy code này → Paste vào NANO → Bấm lệnh để lưu Ctrl + X + Enter → Phấm phím Y + Enter để đồng ý chạy"
   }
 ]
